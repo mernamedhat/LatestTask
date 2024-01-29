@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_main">
+    <!-- MainFragment -->
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="com.merna.mylatesttask.ui.posts.PostsFragment"
+        android:label="fragment_view_balance"
+        tools:layout="@layout/fragment_posts">
+        <action
+            android:id="@+id/fragment_profile_to_albumsDetails"
+            app:destination="@id/AlbumsDetailsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/AlbumsDetailsFragment"
+        android:name="com.merna.mylatesttask.ui.posts_details.PostsDetailsFragment"
+        android:label="fragment_view_balance"
+        tools:layout="@layout/fragment_posts_details">
+
+        <argument
+            android:name="albumid"
+            app:argType="integer" />
+
+    </fragment>
+
+
+
+</navigation>
